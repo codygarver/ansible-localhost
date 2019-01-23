@@ -1,0 +1,45 @@
+---
+- name: Install useful default packages
+  dnf:
+    pkg:
+      - flatpak
+      - firefox
+      - mpv
+      - gedit
+      - mkvtoolnix-gui
+      - dconf-editor
+      - steam
+      - VirtualBox
+      - gnome-system-monitor
+      - curl
+      - git
+      - nmap
+      - npm
+    state: latest
+
+- name: Install Tusk
+  dnf:
+    name: 'https://github.com/klaussinani/tusk/releases/download/v0.21.0/tusk-0.21.0.x86_64.rpm'
+    state: present
+
+- name: Install youtube-dl
+  pip:
+    name: youtube-dl
+    state: latest
+
+- name: Add the flathub flatpak repository remote
+  flatpak_remote:
+    name: flathub
+    state: present
+    flatpakrepo_url: https://dl.flathub.org/repo/flathub.flatpakrepo
+
+
+- name: Install the Spotify package from flathub
+  flatpak:
+    name: com.spotify.Client
+    state: present
+
+- name: Install the Slack package from flathub                 
+  flatpak:
+    name: com.slack.Slack
+    state: present
