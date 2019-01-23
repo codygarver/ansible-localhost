@@ -2,6 +2,7 @@
 - name: Install useful default packages
   dnf:
     pkg:
+      - docker
       - flatpak
       - firefox
       - mpv
