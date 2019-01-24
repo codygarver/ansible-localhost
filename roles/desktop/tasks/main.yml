@@ -23,6 +23,11 @@
     name: 'https://github.com/klaussinani/tusk/releases/download/v0.21.0/tusk-0.21.0.x86_64.rpm'
     state: present
 
+- name: Install chezmoi
+  dnf:
+    name: 'https://github.com/twpayne/chezmoi/releases/download/v1.2.0/chezmoi-1.2.0-387-x86_64.rpm'
+    state: present
+
 - name: Install youtube-dl
   pip:
     name: youtube-dl
