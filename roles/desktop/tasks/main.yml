@@ -3,6 +3,8 @@
   dnf:
     pkg:
       - docker
+      - exfat-utils
+      - fuse-exfat
       - flatpak
       - firefox
       - mpv
