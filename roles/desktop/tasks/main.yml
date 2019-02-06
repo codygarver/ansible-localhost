@@ -2,6 +2,7 @@
 - name: Install useful default packages
   dnf:
     pkg:
+      - baobab
       - docker
       - exfat-utils
       - fuse-exfat
