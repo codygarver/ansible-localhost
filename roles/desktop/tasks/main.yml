@@ -9,6 +9,7 @@
       - flatpak
       - firefox
       - gnome-disk-utility
+      - mediainfo-gui
       - mpv
       - gedit
       - mkvtoolnix-gui
