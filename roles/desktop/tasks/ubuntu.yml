@@ -30,10 +30,10 @@
 
 - name: Install Tusk .deb
   apt:
-    name: 'https://github.com/klaussinani/tusk/releases/download/v0.21.0/tusk_0.21.0_amd64.deb'
+    deb: 'https://github.com/klaussinani/tusk/releases/download/v0.21.0/tusk_0.21.0_amd64.deb'
     state: present
 
 - name: Install chezmoi .deb
   apt:
-    name: 'https://github.com/twpayne/chezmoi/releases/download/v1.3.0/chezmoi_1.3.0-460_linux_amd64.deb'
+    deb: 'https://github.com/twpayne/chezmoi/releases/download/v1.3.0/chezmoi_1.3.0-460_linux_amd64.deb'
     state: present
