@@ -22,6 +22,7 @@
       - git
       - nmap
       - npm
+      - vim-enhanced
     state: latest
 
 - name: Install Tusk RPM

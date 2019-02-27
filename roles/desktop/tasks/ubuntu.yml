@@ -27,6 +27,7 @@
       - git
       - nmap
       - npm
+      - vim
 
 - name: Install Tusk .deb
   apt:
