@@ -6,25 +6,11 @@
 - import_tasks: ubuntu.yml
   when: ansible_os_family != "Fedora" and ansible_os_family != "Kaizen"
 
+- import_tasks: flatpak.yml
+  when: ansible_os_family == "Fedora" or ansible_os_family == "Kaizen"
+
 - name: Install youtube-dl
   pip:
     name: youtube-dl
     executable: pip3
     state: latest
-
-- name: Add the flathub flatpak repository remote
-  flatpak_remote:
-    name: flathub
-    state: present
-    flatpakrepo_url: https://dl.flathub.org/repo/flathub.flatpakrepo
-
-
-- name: Install the Spotify package from flathub
-  flatpak:
-    name: com.spotify.Client
-    state: present
-
-- name: Install the Slack package from flathub
-  flatpak:
-    name: com.slack.Slack
-    state: present
