@@ -9,6 +9,8 @@
 - import_tasks: flatpak.yml
   when: ansible_os_family == "Fedora" or ansible_os_family == "Kaizen"
 
+- import_tasks: docker.yml
+
 - name: Install youtube-dl
   pip:
     name: youtube-dl
