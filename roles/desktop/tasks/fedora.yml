@@ -3,6 +3,7 @@
   dnf:
     pkg:
       - baobab
+      - devscripts
       - exfat-utils
       - fuse-exfat
       - flatpak

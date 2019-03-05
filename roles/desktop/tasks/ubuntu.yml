@@ -8,6 +8,7 @@
   apt:
     pkg:
       - baobab
+      - devscripts
       - exfat-utils
       - exfat-fuse
       - flatpak
