@@ -22,6 +22,7 @@
       - git
       - nmap
       - npm
+      - rpm-build
       - vim-enhanced
     state: latest
 
