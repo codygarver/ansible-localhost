@@ -38,3 +38,8 @@
   apt:
     deb: 'https://github.com/twpayne/chezmoi/releases/download/v1.3.0/chezmoi_1.3.0-460_linux_amd64.deb'
     state: present
+
+- name: Install Slack .deb
+  apt:
+    deb: 'https://downloads.slack-edge.com/linux_releases/slack-desktop-3.3.7-amd64.deb'
+    state: present

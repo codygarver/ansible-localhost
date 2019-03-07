@@ -11,8 +11,3 @@
   flatpak:
     name: com.spotify.Client
     state: present
-
-- name: Install the Slack package from flathub
-  flatpak:
-    name: com.slack.Slack
-    state: present
