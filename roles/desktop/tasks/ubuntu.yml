@@ -36,7 +36,7 @@
 
 - name: Install chezmoi .deb
   apt:
-    deb: 'https://github.com/twpayne/chezmoi/releases/download/v1.3.0/chezmoi_1.3.0-460_linux_amd64.deb'
+    deb: 'https://github.com/twpayne/chezmoi/releases/download/v{{ chezmoi_version }}/chezmoi_{{ chezmoi_version }}-{{ chezmoi_revision }}_linux_amd64.deb'
     state: present
 
 - name: Install Slack .deb
