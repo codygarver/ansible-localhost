@@ -28,7 +28,7 @@
 
 - name: Install Tusk RPM
   dnf:
-    name: 'https://github.com/klaussinani/tusk/releases/download/v0.22.0/tusk-0.22.0.x86_64.rpm'
+    name: 'https://github.com/klaussinani/tusk/releases/download/v{{ tusk_version }}/tusk-{{ tusk_version }}.x86_64.rpm'
     state: present
 
 - name: Install chezmoi RPM

@@ -31,7 +31,7 @@
 
 - name: Install Tusk .deb
   apt:
-    deb: 'https://github.com/klaussinani/tusk/releases/download/v0.22.0/tusk_0.22.0_amd64.deb'
+    deb: 'https://github.com/klaussinani/tusk/releases/download/v{{ tusk_version }}/tusk_{{ tusk_version }}_amd64.deb'
     state: present
 
 - name: Install chezmoi .deb
