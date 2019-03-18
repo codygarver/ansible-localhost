@@ -8,6 +8,8 @@
 
 - import_tasks: docker.yml
 
+- import_tasks: slack.yml
+
 - name: Install youtube-dl
   pip:
     name: youtube-dl

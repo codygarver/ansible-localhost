@@ -35,8 +35,3 @@
   dnf:
     name: 'https://github.com/twpayne/chezmoi/releases/download/v1.3.0/chezmoi-1.3.0-460-x86_64.rpm'
     state: present
-
-- name: Install Slack RPM
-  dnf:
-    name: 'https://downloads.slack-edge.com/linux_releases/slack-3.3.7-0.1.fc21.x86_64.rpm'
-    state: present
