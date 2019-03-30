@@ -32,4 +32,4 @@
     name: slack-desktop
     state: present
     update_cache: yes
-  when: ansible_os_family != "Fedora" or ansible_os_family != "Kaizen"
+  when: ansible_os_family != "Fedora" and ansible_os_family != "Kaizen"
