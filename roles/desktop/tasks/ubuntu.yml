@@ -1,9 +1,5 @@
 ---
 
-- name: Add flathub repository
-  apt_repository:
-    repo: ppa:alexlarsson/flatpak
-
 - name: Install Ubuntu packages
   apt:
     pkg:
@@ -11,7 +7,6 @@
       - devscripts
       - exfat-utils
       - exfat-fuse
-      - flatpak
       - firefox
       - gnome-disk-utility
       - mediainfo-gui

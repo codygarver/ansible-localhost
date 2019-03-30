@@ -6,7 +6,6 @@
       - devscripts
       - exfat-utils
       - fuse-exfat
-      - flatpak
       - firefox
       - gnome-disk-utility
       - mediainfo-gui
