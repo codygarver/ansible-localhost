@@ -15,11 +15,3 @@
     name: youtube-dl
     executable: pip3
     state: latest
-
-- name: Create /var/shared
-  file:
-    path: /var/shared
-    state: directory
-    mode: 0750
-    owner: codygarver
-    group: codygarver
