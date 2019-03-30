@@ -1,29 +1,16 @@
 ---
+
 - name: Install Fedora packages
   dnf:
-    pkg:
-      - baobab
-      - devscripts
-      - exfat-utils
-      - fuse-exfat
-      - firefox
-      - gnome-disk-utility
-      - mediainfo-gui
-      - mpv
-      - python3-pip
-      - gedit
-      - mkvtoolnix-gui
-      - dconf-editor
-      - steam
-#     - VirtualBox
-      - gnome-system-monitor
-      - curl
-      - git
-      - nmap
-      - npm
-      - rpm-build
-      - vim-enhanced
+    pkg: "{{ item }}"
     state: latest
+  with_items:  "{{ fedora_ubuntu_packages }}"
+
+- name: Install Fedora packages
+  dnf:
+    pkg: "{{ item }}"
+    state: latest
+  with_items:  "{{ fedora_packages }}"
 
 - name: Install Tusk RPM
   dnf:

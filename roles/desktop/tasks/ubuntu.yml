@@ -2,27 +2,15 @@
 
 - name: Install Ubuntu packages
   apt:
-    pkg:
-      - baobab
-      - devscripts
-      - exfat-utils
-      - exfat-fuse
-      - firefox
-      - gnome-disk-utility
-      - mediainfo-gui
-      - mpv
-      - python3-pip
-      - gedit
-      - mkvtoolnix-gui
-      - dconf-editor
-      - steam
-#      - virtualbox
-      - gnome-system-monitor
-      - curl
-      - git
-      - nmap
-      - npm
-      - vim
+    pkg: "{{ item }}"
+    state: latest
+  with_items:  "{{ fedora_ubuntu_packages }}"
+
+- name: Install Ubuntu packages
+  apt:
+    pkg: "{{ item }}"
+    state: latest
+  with_items:  "{{ ubuntu_packages }}"
 
 - name: Install Tusk .deb
   apt:

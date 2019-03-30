@@ -1,3 +1,33 @@
 chezmoi_version: 1.4.0
 chezmoi_revision: 519
 tusk_version: 0.22.0
+
+fedora_ubuntu_packages:
+  - baobab
+  - curl
+  - dconf-editor
+  - devscripts
+  - exfat-utils
+  - firefox
+  - gedit
+  - git
+  - gnome-disk-utility
+  - gnome-system-monitor
+  - mediainfo-gui
+  - mkvtoolnix-gui
+  - mpv
+  - nmap
+  - npm
+  - python3-pip
+  - steam
+
+fedora_packages:
+  - fuse-exfat
+  - rpm-build
+  - vim-enhanced
+    #  - VirtualBox
+
+ubuntu_packages:
+  - exfat-fuse
+  - vim
+  - virtualbox
