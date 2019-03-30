@@ -2,15 +2,13 @@
 
 - name: Install Fedora packages
   dnf:
-    pkg: "{{ item }}"
+    pkg: "{{ fedora_ubuntu_packages }}"
     state: latest
-  with_items:  "{{ fedora_ubuntu_packages }}"
 
 - name: Install Fedora packages
   dnf:
-    pkg: "{{ item }}"
+    pkg: "{{ fedora_packages }}"
     state: latest
-  with_items:  "{{ fedora_packages }}"
 
 - name: Install Tusk RPM
   dnf:

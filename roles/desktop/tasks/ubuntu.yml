@@ -2,15 +2,13 @@
 
 - name: Install Ubuntu packages
   apt:
-    pkg: "{{ item }}"
+    pkg: "{{ fedora_ubuntu_packages }}"
     state: latest
-  with_items:  "{{ fedora_ubuntu_packages }}"
 
 - name: Install Ubuntu packages
   apt:
-    pkg: "{{ item }}"
+    pkg: "{{ ubuntu_packages }}"
     state: latest
-  with_items:  "{{ ubuntu_packages }}"
 
 - name: Install Tusk .deb
   apt:
