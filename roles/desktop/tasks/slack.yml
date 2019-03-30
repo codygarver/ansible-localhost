@@ -14,3 +14,22 @@
     name: slack
     state: present
   when: ansible_os_family == "Fedora" or ansible_os_family == "Kaizen"
+
+- name: Add Slack repo
+  apt_repository:
+    repo: deb https://packagecloud.io/slacktechnologies/slack/debian/ jessie main
+    state: present
+  when: ansible_os_family != "Fedora" and ansible_os_family != "Kaizen"
+
+- name: Add Slack repo key
+  apt_key:
+    url: https://packagecloud.io/slacktechnologies/slack/gpgkey
+    state: present
+  when: ansible_os_family != "Fedora" and ansible_os_family != "Kaizen"
+
+- name: Install Slack
+  apt:
+    name: slack-desktop
+    state: present
+    update_cache: yes
+  when: ansible_os_family != "Fedora" or ansible_os_family != "Kaizen"
