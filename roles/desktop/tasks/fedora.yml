@@ -15,7 +15,7 @@
       - mkvtoolnix-gui
       - dconf-editor
       - steam
-      - VirtualBox
+#     - VirtualBox
       - gnome-system-monitor
       - curl
       - git
