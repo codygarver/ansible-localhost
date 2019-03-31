@@ -20,3 +20,4 @@
 
 - name: Update hicolor icon cache
   command: /usr/bin/gtk-update-icon-cache /usr/share/icons/hicolor
+  changed_when: False
