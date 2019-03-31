@@ -1,0 +1,22 @@
+---
+
+- name: Install Tusk RPM
+  dnf:
+    name: 'https://github.com/klaussinani/tusk/releases/download/v{{ tusk_version }}/tusk-{{ tusk_version }}.x86_64.rpm'
+    state: present
+  when: ansible_os_family == "Fedora" or ansible_os_family == "Kaizen"
+
+- name: Install Tusk .deb
+  apt:
+    deb: 'https://github.com/klaussinani/tusk/releases/download/v{{ tusk_version }}/tusk_{{ tusk_version }}_amd64.deb'
+    state: present
+  when: ansible_os_family != "Fedora" and ansible_os_family != "Kaizen"
+
+- name: Symlink Tusk icon
+  file:
+    src: '/usr/share/icons/hicolor/0x0/apps/tusk.png'
+    dest: '/usr/share/icons/hicolor/scalable/apps/tusk.png'
+    state: link
+
+- name: Update hicolor icon cache
+  command: /usr/bin/gtk-update-icon-cache /usr/share/icons/hicolor

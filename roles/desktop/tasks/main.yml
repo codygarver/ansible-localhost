@@ -10,6 +10,8 @@
 
 - import_tasks: slack.yml
 
+- import_tasks: tusk.yml
+
 - name: Install youtube-dl
   pip:
     name: youtube-dl

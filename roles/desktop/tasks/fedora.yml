@@ -10,11 +10,6 @@
     pkg: "{{ fedora_packages }}"
     state: latest
 
-- name: Install Tusk RPM
-  dnf:
-    name: 'https://github.com/klaussinani/tusk/releases/download/v{{ tusk_version }}/tusk-{{ tusk_version }}.x86_64.rpm'
-    state: present
-
 - name: Install chezmoi RPM
   dnf:
     name: 'https://github.com/twpayne/chezmoi/releases/download/v{{ chezmoi_version }}/chezmoi-{{ chezmoi_version }}-{{ chezmoi_revision }}-x86_64.rpm'

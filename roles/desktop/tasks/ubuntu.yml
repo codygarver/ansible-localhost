@@ -10,11 +10,6 @@
     pkg: "{{ ubuntu_packages }}"
     state: latest
 
-- name: Install Tusk .deb
-  apt:
-    deb: 'https://github.com/klaussinani/tusk/releases/download/v{{ tusk_version }}/tusk_{{ tusk_version }}_amd64.deb'
-    state: present
-
 - name: Install chezmoi .deb
   apt:
     deb: 'https://github.com/twpayne/chezmoi/releases/download/v{{ chezmoi_version }}/chezmoi_{{ chezmoi_version }}-{{ chezmoi_revision }}_linux_amd64.deb'
