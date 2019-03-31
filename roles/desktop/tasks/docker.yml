@@ -11,3 +11,19 @@
     name: docker-ce
     state: present
   when: ansible_os_family == "Fedora" or ansible_os_family == "Kaizen"
+
+- name: Add Docker GPG key
+  apt_key:
+    url: https://download.docker.com/linux/ubuntu/gpg
+  when: ansible_os_family != "Fedora" and ansible_os_family != "Kaizen"
+
+- name: Add Docker repo
+  apt_repository:
+    repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu {{ ubuntu_codename }} stable
+  when: ansible_os_family != "Fedora" and ansible_os_family != "Kaizen"
+
+- name: Install Docker
+  apt:
+    name: docker-ce
+    state: present
+  when: ansible_os_family != "Fedora" and ansible_os_family != "Kaizen"

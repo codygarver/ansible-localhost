@@ -2,6 +2,8 @@ chezmoi_version: 1.4.0
 chezmoi_revision: 519
 tusk_version: 0.22.0
 
+ubuntu_codename: bionic
+
 fedora_ubuntu_packages:
   - baobab
   - curl
