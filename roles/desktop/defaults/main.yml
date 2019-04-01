@@ -20,6 +20,7 @@ fedora_ubuntu_packages:
   - mpv
   - nmap
   - npm
+  - p7zip
   - python3-pip
   - steam
 
