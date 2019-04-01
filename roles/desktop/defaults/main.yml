@@ -25,6 +25,7 @@ fedora_ubuntu_packages:
   - steam
 
 fedora_packages:
+  - aegisub
   - fuse-exfat
   - rpm-build
   - vim-enhanced
