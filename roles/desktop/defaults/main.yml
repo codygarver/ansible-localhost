@@ -35,3 +35,4 @@ ubuntu_packages:
   - exfat-fuse
   - vim
   - virtualbox
+  - zsync

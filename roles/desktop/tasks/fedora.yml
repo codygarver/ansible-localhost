@@ -14,3 +14,8 @@
   dnf:
     name: 'https://github.com/twpayne/chezmoi/releases/download/v{{ chezmoi_version }}/chezmoi-{{ chezmoi_version }}-{{ chezmoi_revision }}-x86_64.rpm'
     state: present
+
+- name: Install zsync RPM
+  dnf:
+    name: 'https://github.com/rpmsphere/x86_64/raw/master/z/zsync-0.6.2-4.1.x86_64.rpm'
+    state: present
