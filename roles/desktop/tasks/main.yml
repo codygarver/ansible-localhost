@@ -1,5 +1,14 @@
 ---
 
+- name: Check / free disk space
+  shell: df -h / | awk '{ print $4 }' | tail -n 1 | sed 's/.$//'
+  register: free_disk_space
+  changed_when: False
+
+- fail:
+    msg: "Not enough / free disk space! Only {{ free_disk_space.stdout }} GB"
+  when: free_disk_space.stdout|int < 10
+
 - import_tasks: fedora.yml
   when: ansible_os_family == "Fedora" or ansible_os_family == "Kaizen"
 
