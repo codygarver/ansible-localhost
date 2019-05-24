@@ -1,5 +1,5 @@
-chezmoi_version: 1.4.0
-chezmoi_revision: 519
+chezmoi_version: 1.5.5
+chezmoi_revision: 852
 tusk_version: 0.23.0
 
 ubuntu_codename: bionic
