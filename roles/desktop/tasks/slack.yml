@@ -6,7 +6,7 @@
     dest: /etc/yum.repos.d/slack.repo
     owner: root
     group: root
-    mod: 0644
+    mode: 0644
   when: ansible_os_family == "Fedora" or ansible_os_family == "Kaizen"
 
 - name: Install Slack
