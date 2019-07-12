@@ -15,24 +15,30 @@ fedora_ubuntu_packages:
   - git
   - gnome-disk-utility
   - gnome-system-monitor
-  - mediainfo-gui
-  - mkvtoolnix-gui
   - mpv
   - nmap
   - npm
   - p7zip
   - python3-pip
+
+fedora_ubuntu_packages_extra:
+  - mediainfo-gui
+  - mkvtoolnix-gui
   - steam
 
 fedora_packages:
-  - aegisub
   - fuse-exfat
   - rpm-build
   - vim-enhanced
-    #  - VirtualBox
+
+fedora_packages_extra:
+  - aegisub
+# - VirtualBox
 
 ubuntu_packages:
   - exfat-fuse
   - vim
-  - virtualbox
   - zsync
+
+ubuntu_packages_extra:
+  - virtualbox

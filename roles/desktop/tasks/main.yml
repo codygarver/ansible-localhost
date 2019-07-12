@@ -12,7 +12,13 @@
 - import_tasks: fedora.yml
   when: ansible_os_family == "Fedora" or ansible_os_family == "Kaizen"
 
+- import_tasks: fedora-extra.yml
+  when: ansible_os_family == "Fedora" or ansible_os_family == "Kaizen"
+
 - import_tasks: ubuntu.yml
+  when: ansible_os_family != "Fedora" and ansible_os_family != "Kaizen"
+
+- import_tasks: ubuntu-extra.yml
   when: ansible_os_family != "Fedora" and ansible_os_family != "Kaizen"
 
 - import_tasks: docker.yml
