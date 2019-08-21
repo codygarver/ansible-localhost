@@ -1,0 +1,11 @@
+---
+
+- name: Install Ubuntu packages
+  apt:
+    pkg: "{{ fedora_ubuntu_packages_extra }}"
+    state: latest
+
+- name: Install Ubuntu packages
+  apt:
+    pkg: "{{ ubuntu_packages_extra }}"
+    state: latest

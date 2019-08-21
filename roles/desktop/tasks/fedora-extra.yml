@@ -1,0 +1,11 @@
+---
+
+- name: Install Fedora packages
+  dnf:
+    pkg: "{{ fedora_ubuntu_packages_extra }}"
+    state: latest
+
+- name: Install Fedora packages
+  dnf:
+    pkg: "{{ fedora_packages_extra }}"
+    state: latest
